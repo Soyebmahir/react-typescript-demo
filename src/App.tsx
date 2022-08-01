@@ -1,5 +1,6 @@
 
 import './App.css';
+import Button from './components/Button';
 import Greet from './components/Greet';
 import Heading from './components/Heading';
 import Oscar from './components/Oscar';
@@ -31,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hey There</h1>
-      <Greet name='Soyeb' massageCount={10} isLoggedIn={false}/>
+      <Greet name='Soyeb' massageCount={10} isLoggedIn={true}/>
       <Person name={personName}/>
       <PersonList names={nameList} ></PersonList>
       <Status status ='error'></Status>
@@ -39,6 +40,9 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicaprio!</Heading>
       </Oscar>
+      <Button handleClick={()=>{
+        console.log('Event Clicked')
+      }}></Button>
     </div> 
   );
 }
