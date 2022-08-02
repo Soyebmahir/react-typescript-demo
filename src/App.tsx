@@ -40,8 +40,8 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicaprio!</Heading>
       </Oscar>
-      <Button handleClick={()=>{
-        console.log('Event Clicked')
+      <Button handleClick={(event,id)=>{
+        console.log('Event Clicked',event,id)
       }}></Button>
     </div> 
   );
