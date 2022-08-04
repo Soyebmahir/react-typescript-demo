@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useState } from 'react';
 
 type userProps={
@@ -7,7 +7,7 @@ type userProps={
 }
 
 const User = (props:userProps) => {
-const [user,setUser]=useState<null | userProps>(null)
+const [user,setUser]=useState <null | userProps> (null)
 const loggedIn=()=>{
 
     setUser({
