@@ -14,6 +14,10 @@ import Status from './components/Status';
 
 import {ThemeContextProvider} from './components/Hooks/Context/ThemeContext'
 import Box from './components/Hooks/Context/Box';
+import Private from './components/component-props/Private';
+import Profile from './components/component-props/Profile';
+import List from './components/generics/List';
+import RandomNumber from './components/restricting-props/RandomNumber';
 
 
 function App() {
@@ -59,6 +63,27 @@ function App() {
       <ThemeContextProvider>
         <Box></Box>
       </ThemeContextProvider>
+      <Private isloggedin={false} Component={Profile}/>
+
+      <List item={['soyeb','Mahir','Himel']} onClick={(item) => console.log(item)
+        }/>
+
+
+        <List item={[1,2,3]} onClick={(item) => console.log(item)
+        }/>
+
+
+        <List item={[{
+          first:'mahito',
+          last:'Abroy'
+        },
+        {
+          first:'Ujjal',
+          last:'Roy'
+        }]} onClick={(item) => console.log(item)
+        }/>
+
+        <RandomNumber value={10} isPositive></RandomNumber>
 
 
     </div> 
